@@ -37,6 +37,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
 end
 
+group :development, :test do
+  gem 'capybara'
+end
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
