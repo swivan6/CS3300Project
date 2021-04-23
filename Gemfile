@@ -30,6 +30,13 @@ group :production do
   gem 'rails_12factor'
 end
 
+#For Rspec Testing
+gem 'mini_racer'
+  
+group :development, :test do
+  gem 'rspec-rails', '~> 3.7'
+end
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
