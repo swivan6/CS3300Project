@@ -32,6 +32,9 @@ end
 
 #For Rspec Testing
 gem 'mini_racer'
+
+#For authentication with devise
+gem 'devise'
   
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
