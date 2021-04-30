@@ -10,3 +10,11 @@ before_install:
 
 script:
  - bundle exec rspec
+ 
+deploy:
+ provider: heroku
+ api_key: 25471dfb-a8b3-421b-9992-2770f07376a8
+ app: calm-caverns-10083
+ run: "rake db:migrate"
+ on:
+  branch: main_or_master
