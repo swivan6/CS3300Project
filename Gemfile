@@ -40,6 +40,9 @@ gem 'devise'
 
 #Bootstrap gem
 gem 'bootstrap', '~> 4.6.0'
+
+#Jquery gem
+gem 'jquery-rails'
   
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
