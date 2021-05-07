@@ -7,7 +7,6 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" type="text/css" href="main.css">
   </head>
 
   <body>
@@ -30,7 +29,42 @@
           </ul>
       </div>
     </nav>
-    
+    <main role="main">
+
+      <!-- Main jumbotron to explain purpose of site -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Student Project Portfolio</h1>
+          <p>Spencer Ivan project portfolio. 3rd Year Computer Science major at UCCS.</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Project 1</h2>
+            <p>Project description. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
