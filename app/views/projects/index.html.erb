@@ -11,8 +11,7 @@
           <div class="card-body">
             <h2 class="card-title"><%= project.name %></h2>
             <p class="card-text"><%= project.description %></p>
-            <p><a class="btn btn-secondary" <%= link_to 'View', project %> </a></p>
-            <p><a class="btn btn-secondary" <%= link_to 'Edit', edit_project_path(@project) %> </a></p>
+            <p><a class="btn btn-secondary" <%= link_to 'View/Edit', project %> </a></p>
             <p><a class="btn btn-secondary" <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %> </a></p>
           </div>        
         </div>
