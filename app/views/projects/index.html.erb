@@ -2,21 +2,40 @@
 
 <h1>Projects</h1>
 
-<div class="row">
-  <% @projects.each do |project| %>
-    <div class="col-sm-4 my-4">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title"><%= project.name %></h2>
-          <p class="card-text"><%= project.description %></p>
-          <p><a class="btn btn-secondary" <%= link_to 'View/Edit', project %> </a></p>
-          <p><a class="btn btn-secondary" <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %> </a></p>
-        </div>        
+<% if user_signed_in? %>
+  <div class="row">
+    <% @projects.each do |project| %>
+      <div class="col-sm-4 my-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"><%= project.name %></h2>
+            <p class="card-text"><%= project.description %></p>
+            <p><a class="btn btn-secondary" <%= link_to 'View/Edit', project %> </a></p>
+            <p><a class="btn btn-secondary" <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %> </a></p>
+          </div>        
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+  <%= link_to 'New Project', new_project_path %>
+<%else %>
+  <div class="row">
+    <% @projects.each do |project| %>
+      <div class="col-sm-4 my-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"><%= project.name %></h2>
+            <p class="card-text"><%= project.description %></p>
+            <p><a class="btn btn-secondary" <%= link_to 'View/Edit', project %> </a></p>
+          </div>        
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+
   
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+
