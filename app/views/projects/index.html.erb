@@ -17,7 +17,8 @@
       </div>
     <% end %>
   </div>
-  <%= link_to 'New Project', new_project_path %>
+  <p><a class="btn btn-secondary" <%= link_to 'New Project', new_project_path %> </a></p>
+  
 <%else %>
   <div class="row">
     <% @projects.each do |project| %>
@@ -26,7 +27,7 @@
           <div class="card-body">
             <h2 class="card-title"><%= project.name %></h2>
             <p class="card-text"><%= project.description %></p>
-            <p><a class="btn btn-secondary" <%= link_to 'View/Edit', project %> </a></p>
+            <p><a class="btn btn-secondary" <%= link_to 'View', project %> </a></p>
           </div>        
         </div>
       </div>
