@@ -1,16 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-9">
+    <p><h1> <%= @project.name %></h1></p>
+  </div>
 
-<p>
-  <h1> <%= @project.name %></h1>
-</p>
+  <div class="col-md-3">
+    <h4> Project Description </h4>
+    <p><%= @project.description %></p>
+  </div>
+</div>
 
-<p>
-  <%= @project.description %>
-</p>
+
+
+
 
 <% if user_signed_in? %>
   <a class="btn btn-secondary" <%= link_to 'Edit', edit_project_path(@project) %> </a>
 <% end %>
 
 <a class="btn btn-secondary" <%= link_to 'Back', projects_path %> </a>
-
