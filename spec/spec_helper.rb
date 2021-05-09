@@ -93,4 +93,6 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  #Add devise helper to add authentication ability to feature tests that are failing
+  config.include Devise::Test::IntegrationHelpers, type: :feature
 end
