@@ -68,4 +68,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  #Add devise helper to add authentication ability to feature tests that are failing
+  config.include Devise::Test::IntegrationHelpers, type: :feature
 end
