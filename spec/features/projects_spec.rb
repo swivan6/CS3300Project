@@ -50,7 +50,7 @@ RSpec.feature "Projects", type: :feature do
       visit projects_path
       user = User.create(email: 'testemail@test.com', password: "password", password_confirmation: "password")
       sign_in user
-      click_link "Delete"
+      click "Delete"
       expect(page).to have_content("Project was successfully destroyed")
       expect(Project.count).to eq(0)
     end
